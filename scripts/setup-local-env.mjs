@@ -80,7 +80,7 @@ function readStripeCliTestSecretKey() {
 
   let activeProfile = 'default'
   for (const line of configOutput.split(/\r?\n/)) {
-    const match = line.match(/^project-name\s*=\s*'([^']+)'/)
+    const match = line.match(/^project-name\s*=\s*["']([^"']+)["']/)
     if (match) {
       activeProfile = match[1]
       break
@@ -100,7 +100,7 @@ function readStripeCliTestSecretKey() {
     }
     if (!inActiveProfile) continue
 
-    const match = trimmed.match(/^test_mode_api_key\s*=\s*'([^']+)'/)
+    const match = trimmed.match(/^test_mode_api_key\s*=\s*["']([^"']+)["']/)
     if (match && match[1].startsWith('sk_test_')) return match[1]
   }
 
