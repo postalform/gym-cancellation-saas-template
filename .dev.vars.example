@@ -1,0 +1,18 @@
+# Copy to .dev.vars for local Wrangler development.
+# `npm run setup` can generate this from Stripe Projects env output.
+
+APP_NAME="Gym Cancellation SaaS"
+CHECKOUT_DISPLAY_NAME="Gym Cancellation SaaS"
+CHECKOUT_AMOUNT_CENTS=1299
+CHECKOUT_CURRENCY=usd
+STRIPE_API_VERSION=2025-09-30.clover
+
+# Stripe Checkout. Use an sk_test_ key locally.
+STRIPE_SECRET_KEY=sk_test_xxx
+
+# PostalForm Projects. `stripe projects build` / `stripe projects env --pull`
+# should provide at least POSTALFORM_TEST_API_KEY for test-mode mail.
+POSTALFORM_API_BASE=https://projects.postalform.com/api
+POSTALFORM_MODE=test
+POSTALFORM_TEST_API_KEY=pf_test_xxx
+# POSTALFORM_LIVE_API_KEY=pf_live_xxx

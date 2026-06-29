@@ -1,0 +1,13 @@
+name = "gym-cancellation-saas"
+main = "src/index.js"
+compatibility_date = "2026-06-05"
+workers_dev = true
+
+[vars]
+APP_NAME = "Gym Cancellation SaaS"
+CHECKOUT_DISPLAY_NAME = "Gym Cancellation SaaS"
+CHECKOUT_AMOUNT_CENTS = "1299"
+CHECKOUT_CURRENCY = "usd"
+POSTALFORM_API_BASE = "https://projects.postalform.com/api"
+POSTALFORM_MODE = "test"
+STRIPE_API_VERSION = "2025-09-30.clover"

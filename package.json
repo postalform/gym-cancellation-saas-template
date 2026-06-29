@@ -1,0 +1,19 @@
+{
+  "name": "gym-cancellation-saas-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup-local-env.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:cloudflare": "node scripts/deploy-cloudflare.mjs",
+    "check": "node --check src/index.js",
+    "projects:status": "stripe projects status",
+    "projects:env": "stripe projects env --pull",
+    "projects:add-resources": "stripe projects add cloudflare/workers --json --yes --accept-tos && stripe projects add postalform/mail --json --yes --accept-tos --confirm-paid-service --config '{\"workspace_name\":\"Gym Cancellation SaaS\"}'"
+  },
+  "devDependencies": {
+    "wrangler": "^4.105.0"
+  }
+}

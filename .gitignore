@@ -1,0 +1,14 @@
+.dev.vars
+.wrangler/
+node_modules/
+dist/
+npm-debug.log*
+
+.agents/
+.claude/
+.cursor/
+
+.projects/
+.env
+.env.*
+!.env.example
