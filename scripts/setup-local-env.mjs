@@ -43,10 +43,14 @@ function parseEnvFile(filePath) {
 }
 
 function unquote(value) {
-  if (
-    (value.startsWith('"') && value.endsWith('"')) ||
-    (value.startsWith("'") && value.endsWith("'"))
-  ) {
+  if (value.startsWith('"') && value.endsWith('"')) {
+    try {
+      return JSON.parse(value)
+    } catch {
+      return value.slice(1, -1)
+    }
+  }
+  if (value.startsWith("'") && value.endsWith("'")) {
     return value.slice(1, -1)
   }
   return value
