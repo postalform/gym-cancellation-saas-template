@@ -21,4 +21,4 @@ This is a Stripe Projects build template for a Cloudflare Worker SaaS that uses 
 
 - Main Worker entrypoint: `src/index.js`.
 - Cloudflare config: `wrangler.toml`.
-- Template manifest draft: `registry/gym_cancellation_saas/cloudflare-postalform.yaml`.
+- Template registry manifests live in `stripe/projects-template-registry` and must pin an exact commit from this repo.

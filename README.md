@@ -98,4 +98,4 @@ npm run setup
 
 ## Template registry
 
-The registry manifest lives in `registry/gym_cancellation_saas/cloudflare-postalform.yaml` after the repo is published and the pinned commit hash is known. Submit that manifest to `stripe/projects-template-registry`.
+Publish this repository publicly and submit a manifest to `stripe/projects-template-registry` that pins the exact commit to copy. The manifest should declare `cloudflare/workers` and `postalform/mail` so `stripe projects build` provisions both resources before showing the next steps above.
