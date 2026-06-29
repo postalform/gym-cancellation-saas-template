@@ -8,6 +8,7 @@ npm-debug.log*
 .claude/
 .cursor/
 
+# Stripe Projects stores local project IDs and vault state here.
 .projects/
 .env
 .env.*
